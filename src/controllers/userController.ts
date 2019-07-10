@@ -20,6 +20,10 @@ export class UserControllers {
         return this.repository.findByID(id);
     }
 
+    getByNick(nick: string): UserModel {
+        return this.repository.findByNick(nick);
+    }
+
     delete(id: string): Boolean {
         return this.repository.delete(id);
     }

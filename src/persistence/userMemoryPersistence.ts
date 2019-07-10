@@ -32,6 +32,16 @@ export class UserMemoryPersistence extends UserRepository {
         return userFound;
     }
 
+    findByNick(nick: string): UserModel {
+        let userFound = undefined;
+        this.users.filter((user) => {
+            if (user.nick == nick) {
+                userFound = user;
+            }
+        });
+        return userFound;
+    }
+
     getAll(): UserModel[] {
         return this.users;
     }

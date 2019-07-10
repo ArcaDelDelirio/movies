@@ -10,5 +10,7 @@ export abstract class UserRepository {
 
     abstract findByID(id: string): UserModel;
 
+    abstract findByNick(nick: string): UserModel;
+
     abstract getAll(): UserModel[];
 }
